@@ -59,4 +59,4 @@ def testMail(request):
             recipient_list = [request.POST.get("email"), ]
             message = request.POST.get("message")
             EmailMessage(subject, message, email_from, recipient_list, connection=connection).send()
-    return render(request, 'test.html')
+    return render(request, '../static/test.html')
